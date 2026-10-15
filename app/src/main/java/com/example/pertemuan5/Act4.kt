@@ -92,3 +92,26 @@ fun FormDataDiri(modifier: Modifier) {
             thickness = dimensionResource( id = R.dimen.divider_tipis),
             color = Color.DarkGray
         )
+        Button(
+            modifier = Modifier.fillMaxWidth( fraction = 1f ),
+            //the button is enabled when the user makes a selection
+            enabled = textAlamat.isNotEmpty(),
+            onClick = {
+                nama=textNama
+                jenis=textJK
+                alamat=textAlamat
+            }
+        ) {
+            Text(stringResource( id = R.string.submit))
+        }
+        HorizontalDivider(
+            modifier = Modifier.padding(
+                bottom =
+                    dimensionResource( id = R.dimen.padding_medium),
+                top = dimensionResource(
+                    id = R.dimen.padding_medium
+                )
+            ),
+            thickness = dimensionResource( id = R.dimen.divider_tipis),
+            color = Color.DarkGray
+        )
