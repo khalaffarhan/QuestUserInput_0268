@@ -44,3 +44,16 @@ fun FormDataDiri(modifier: Modifier) {
     var alamat by remember {mutableStateOf( value = " ")}
     var jenis by remember {mutableStateOf( value = " ")}
 
+    Column(modifier = Modifier.padding(top = 50.dp),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.CenterHorizontally) {
+        OutlinedTextField(
+            value = textNama,
+            singleLine = true,
+            shape = MaterialTheme.shapes.large,
+            modifier = Modifier.width(250.dp),
+            label = { Text(text = "Nama Lengkap") },
+            onValueChange = {
+                textNama = it
+            }
+        )
